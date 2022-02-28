@@ -1,0 +1,29 @@
+1.......
+
+CREATE TABLE EMPLOYEE (
+	Name TEXT NOT NULL,
+	Surname TEXT NOT NULL,
+	Role TEXT NOT NULL,
+	Salary INT NOT NULL
+);
+
+-- insert
+INSERT INTO EMPLOYEE VALUES ('John','Doe','Role1',1500);
+INSERT INTO EMPLOYEE VALUES ('John', 'Smith', 'Role2',700);
+INSERT INTO EMPLOYEE VALUES ('Robert', 'Williams', 'Role1',1200);
+INSERT INTO EMPLOYEE VALUES ('Michael', 'Brown', 'Role2',600);
+INSERT INTO EMPLOYEE VALUES ('David', 'Miller', 'Role2',650);
+
+
+-- fetch 
+SELECT Role, Salary as maxSalry FROM EMPLOYEE order by Salary desc, Role
+ 
+Role	maxSalry
+Role1	1500
+Role1	1200
+Role2	700
+Role2	650
+Role2	600
+
+
+2......
